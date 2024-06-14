@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](///compare/v0.0.9...v1.1.0) (2024-06-14)
+
+
+### Features
+
+* adds scripts and packages requires for app 71a79ea
+* **babel:** adds babel config for running es6 fcb98e4
+* **database:** adds database file eec103f
+* **init:** adds init.sql file for initialiting database tables 0cc25c4
+
 ### 0.0.9 (2024-06-13)
 
 
