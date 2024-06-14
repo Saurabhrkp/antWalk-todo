@@ -26,7 +26,7 @@ export const sendMagicLink = async (email) => {
   const magicLinkUrl = `http://localhost:${port}/auth/magic-link?token=${magic_link_token}`;
 
   const subject = 'Magic Link to TODOs App - (Link Valid for 15 Minutes Only)';
-  const body = `Use the below link for ${magicLinkUrl} to log in.`;
+  const body = `Use the below link for ${magicLinkUrl} to log in. or paste '${magic_link_token}' in postman query params`;
 
   await sendEmail(email, subject, body);
 };
