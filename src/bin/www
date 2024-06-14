@@ -57,10 +57,12 @@ process.on('uncaughtException', (uncaughtExc) => {
 // Setup an express server and define port to listen all incoming requests for this application
 (async () => {
 	const app = require('../app');
+	const database = require('../services/database');
 
 	try {
 		console.log('🤞Trying to connect PG DB Server');
-		// connect
+		const client = await database.pool.connect();
+		await client.query('SELECT 1 + 1 as sum');
 		console.info('✅Connection has been started with PG DB Server.');
 	} catch (error) {
 		console.error('💥Error while connecting PG DB Server', error);
@@ -82,7 +84,7 @@ process.on('uncaughtException', (uncaughtExc) => {
 		// Try disconnecting
 		try {
 			console.log('🤞Trying to disconnect PG DB Server');
-			// disconnect
+			await database.pool.end();
 			console.info('✅Connection has been closed with PG DB Server.');
 		} catch (error) {
 			console.error('💥Error while disconnecting PG DB Server', error);
