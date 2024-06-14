@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](///compare/v1.1.0...v1.2.0) (2024-06-14)
+
+
+### Features
+
+* **auth:** adds jwt tokens functions ba2f7aa
+* **sql:** updates database init sql file ea86655
+* **www:** adds database connection in www file 0d3f172
+
 ## [1.1.0](///compare/v0.0.9...v1.1.0) (2024-06-14)
 
 
