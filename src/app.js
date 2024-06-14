@@ -4,7 +4,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import 'express-async-errors';
 
-import { errorLogger } from 'middlewares/apiLogger';
+import { errorLogger } from 'helpers/apiLogger';
 
 import { environment } from 'configs/index';
 import indexRoute from 'routes/index';

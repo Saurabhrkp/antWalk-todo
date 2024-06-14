@@ -10,6 +10,6 @@ const transport = nodemailer.createTransport({
 });
 
 export const sendEmail = async (to, subject, body) => {
-  let message = { from: `${emailUser} TODOs App`, to, subject, body };
+  let message = { from: `${emailUser} TODOs App`, to, subject, text: body };
   return await transport.sendMail(message);
 };
