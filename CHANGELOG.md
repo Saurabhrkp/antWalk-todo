@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](///compare/v1.2.0...v1.3.0) (2024-06-14)
+
+
+### Features
+
+* **auth:** adds auth route with register & login endpoints e003cf1
+* **auth:** adds authentication middleware for todo route 86ad285
+* **email:** adds email sender function 9a9ab19
+* **env:** adds jwt & email env variables 2345fb7
+* moves logger to helper folder a39e715
+* **todos:** adds new todos api endpoints for CRUD fb4bf91
+
+
+### Bug Fixes
+
+* fixes import and param name 5385fc4
+* updates email body 916ca16
+
 ## [1.2.0](///compare/v1.1.0...v1.2.0) (2024-06-14)
 
 
