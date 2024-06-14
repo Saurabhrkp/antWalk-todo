@@ -20,7 +20,7 @@ export const queryTodos = async (user_id, queryData) => {
   if (completed !== undefined) {
     baseQuery += ` AND completed = $${paramIndex}`;
     countQuery += ` AND completed = $${paramIndex}`;
-    queryParams.push(completed);
+    queryParams.push(completed === 'true' ? true : false);
     paramIndex++;
   }
 
@@ -70,6 +70,6 @@ export const deleteTodoById = async (user_id, id) => {
   const todos = await query(`SELECT * FROM todosapp.todos WHERE  id = $1 AND user_id = $2;`, [id, user_id]);
   if (todos.rows.length === 0) throw new Error('No Record Found');
 
-  await db.query(`DELETE FROM todosapp.todos WHERE id = $1 AND user_id = $2`, [id, user_id]);
+  await query(`DELETE FROM todosapp.todos WHERE id = $1 AND user_id = $2`, [id, user_id]);
   return;
 };

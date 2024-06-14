@@ -11,5 +11,5 @@ export const login = async (req, res) => {
   const { token } = req.query;
   const user = await verifyMagicLink(token);
   const accessToken = await encode({ email: user.email, userId: user.id });
-  res.json(accessToken);
+  res.json({ email: user.email, accessToken });
 };
